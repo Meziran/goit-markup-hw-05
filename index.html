@@ -51,10 +51,15 @@
 
             <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
             <div class="btn-blok">
-                <button class="buton-hero">Заказать услугу </button>
+                <button class="buton-hero" data-open-modal>Заказать услугу </button>
             </div>
 
         </section>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button data-close-modal>X</button>
+            </div>
+        </div>
         <!-- features -->
         <section class="cont-features">
             <div class="container">
@@ -328,7 +333,22 @@
             </section>
         </div>
     </footer>
+    <script>
+        (() => {
+            const refs = {
+                openModalBtn: document.querySelector('[data-open-modal]'),
+                closeModalBtn: document.querySelector('[data-close-modal]'),
+                modal: document.querySelector('[data-modal]'),
+            };
 
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+
+            function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+            }
+        })();
+    </script>
 </body>
 
 </html>
