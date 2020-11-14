@@ -164,6 +164,8 @@ align-items: center;
 .link-header:hover, 
 .link-header:focus{
     color: var(--accent-color);
+    
+    transition: 250ms;
 }
 
 
@@ -177,8 +179,10 @@ align-items: center;
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     margin-top: 18px;
+    
+    transition: 250ms;
 }
 
 .connection-header{
@@ -195,6 +199,8 @@ align-items: center;
 .connection-header:hover, 
 .connection-header:focus{
     color: var(--accent-color);
+
+    transition: 250ms;
 }
 
 .icon-envelope:hover .envelope,
@@ -203,6 +209,8 @@ align-items: center;
 .icon-smartphone:target .tel
 {
     fill: var(--accent-color);
+
+    transition: 250ms;
 }
 
 /* HERO */
@@ -283,6 +291,7 @@ align-items: center;
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 
 .backdrop.is-hidden{
@@ -298,7 +307,7 @@ align-items: center;
     width: 528px;
     height: 581px;
 
-    background-color: #fff;
+    background-color:var( --white);
 }
 
 /*  features  */
@@ -411,6 +420,8 @@ margin-top: 94px;
 }
 .doing-img:hover .title-doing{
     opacity: 1;
+
+    transition: 250ms;
 }
 
 /* TEAM */
@@ -467,10 +478,14 @@ margin-top: 94px;
 }
 .icons-link:hover{
     background-color: var(--accent-color);
+
+    transition: 250ms;
 }
 .icons-link:hover .social-icons-svg,
 .icons-link:target .social-icons-svg{
      fill: var(--white); 
+
+     transition: 250ms;
 }
 /*client */
 .icons-item-client:not(:last-child){
@@ -516,10 +531,14 @@ margin-top: 94px;
 .icons-link-clients:hover,
 .icons-link-clients:target  {
     border: 1px solid var(--accent-color);
+
+    transition: 250ms;
 }
 .icons-link-clients:hover .client-icons-svg,
 .icons-link-clients:target .client-icons-svg{
      fill: var(--accent-color); 
+
+     transition: 250ms;
 }
 
 
@@ -567,6 +586,7 @@ address ul{
 
 .address:hover, .address:focus{
     color: var(--accent-color);
+    transition: 250ms;
   }
 
 .connection-footer{
@@ -580,6 +600,8 @@ address ul{
 .connection-footer:hover, 
 .connection-footer:focus{
     color: var(--accent-color);
+    
+    transition: 250ms;
   }
   .join{
       padding-top: 72px;
@@ -635,8 +657,10 @@ address ul{
     .join-link:focus{
         height: 44px;
         width: 44px;
-        background-color: #2196F3;
+        background-color: var(--accent-color);
         border-radius: 50%;
+
+        transition: 250ms;
     }
     
     
@@ -676,12 +700,13 @@ address ul{
 
 .button-filter:hover,
 .button-filter:focus,
-
 .btn-text:hover,
 .btn-text:focus
 {
     background-color: var(--accent-color);
     color: var(--white);
+
+    transition: 250ms;
 } 
 /* WORK */
 .blok-work{
@@ -701,6 +726,8 @@ address ul{
 }
 .work-kard:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
+    
+    transition: 250ms;
 }
 
 .work-kard:nth-child(3n){
@@ -759,6 +786,23 @@ address ul{
     
     opacity: 0;
 }
-.position-work-kard:hover .title-work-kard{
+.position-work-kard:hover .title-work-kard {
     opacity: 1;
+
+    animation-name: pullUp;
+    animation-duration: 500ms; 
+    animation-timing-function: ease-out;    
+     transform-origin: 0% 100%;
 }
+ 
+
+ 
+@keyframes pullUp {
+    0% {
+        transform: scaleY(0.1);
+     }
+    100% {
+        transform: scaleY(1);
+    }                           
+}
+ 
