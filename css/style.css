@@ -304,13 +304,32 @@ align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+display: flex;
     width: 528px;
     height: 581px;
 
     background-color:var( --white);
 }
 
+.close-modal{
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: 8px;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color:var( --white);
+    
+}
+.modal-icons-close{
+    width: 11px;
+    height: 11px;
+}
+.close-modal:hover .modal-icons-close{
+    fill: var(--accent-color);
+}
 /*  features  */
 
 .ul-features,
